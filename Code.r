@@ -237,3 +237,41 @@ ggplot(newdata3, aes(x = Age, y = PredictedProb)) + geom_ribbon(aes(ymin = LL,
     ymax = UL, fill = Class), alpha = 0.2) + geom_line(aes(colour = Class),
     size = 1)
 ```
+
+ggplot(data = Passengers, aes(x = Sex)) + 
+
+  geom_bar() + 
+
+  geom_text(stat = "count", aes(label = ..count..), vjust = -0.5) + 
+
+  labs( 
+
+    title = "Count of Passengers of each Sex", 
+
+    x = "Sex", 
+
+    y = "Count" 
+
+  ) + 
+
+  theme_light() 
+
+ 
+
+ggplot(data = Passengers, aes(x = Class)) + 
+
+  geom_bar() + 
+
+  geom_text(stat = "count", aes(label = ..count..), vjust = -0.5) + 
+
+  labs( 
+
+    title = "Count of Passengers for each Class", 
+
+    x = "Class", 
+
+    y = "Count" 
+
+  ) + 
+
+  theme_light() 
